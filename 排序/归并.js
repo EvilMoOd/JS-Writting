@@ -6,9 +6,8 @@ function mergeSort(arr) {
   let right = mergeSort(arr.slice(mid));
   // 分治
   let res = [];
-  while (left.length && right.length) {
+  while (left.length && right.length)
     left[0] < right[0] ? res.push(left.shift()) : res.push(right.shift());
-  }
   res.push(...left, ...right);
   return res;
 }
